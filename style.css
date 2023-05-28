@@ -1,0 +1,244 @@
+*{/* ОБОВЯЗКОВО НА КОЖНОМУ ПРОЕКТІ */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.contejner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.box {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+    border-radius: 20px;
+}
+.box:nth-child(1){
+    background-color: aqua;
+    border: 4px solid #0efa06;
+    animation:  box-1 2s linear alternate infinite;
+}
+@keyframes box-1{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.4);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.box:nth-child(2){
+    background-color: rgb(234, 0, 255);
+    border: 4px solid #0429fa;
+    animation:  box-2 2s linear alternate infinite;
+}
+@keyframes box-2{
+    0%{
+        background-color: darkgoldenrod;
+    }
+    50%{
+        background-color: darkorchid;
+    }
+    100%{
+        background-color: darksalmon;
+    }
+}
+.box:nth-child(3){
+    background-color: rgb(255, 0, 0);
+    border: 4px solid #ffee04;
+    animation:  box-3 2s linear alternate infinite;
+}
+@keyframes box-3{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+.conten {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.boxs {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+    border-radius: 20px;
+}
+.boxs:nth-child(1){
+    background-color: rgb(153, 61, 172);
+    border: 4px solid #9abb3e;
+    animation:  boxs-1 2s linear alternate infinite;
+}
+@keyframes boxs-1{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.boxs:nth-child(2){
+    background-color: rgb(96, 170, 230);
+    border: 4px solid #663434;
+    animation:  boxs-2 2s linear alternate infinite;
+}
+@keyframes boxs-2{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(115deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.boxs:nth-child(3){
+    background-color: rgb(196, 235, 26);
+    border: 4px solid #9abb3e;
+    animation:  boxs-3 2s linear alternate infinite;
+}
+@keyframes boxs-3{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-45deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+
+.cont {
+    width: 310px;
+    height: 110px;
+    margin: 200px auto;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+.cont:hover .kub:nth-child(1){
+    animation: kub-1 3s infinite linear alternate;
+}
+@keyframes kub-1{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(30deg);
+        background-color: rgb(140, 27, 247);
+        box-shadow: 0 0 0 10px #2ad895;
+    }
+    100%{
+        transform: rotate(0deg);
+        background-color: #0efa06;
+    }
+}
+.cont:hover .kub:nth-child(2){
+    animation: kub-2 3s infinite linear alternate;
+}
+@keyframes kub-2{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(115deg);
+        background-color: deeppink;
+        box-shadow: 0 0 0 10px #eecf1d;
+    }
+    100%{
+        transform: rotate(0deg);
+        background-color: #0429fa;
+    }
+}
+.cont:hover .kub:nth-child(3){
+    animation: kub-3 3s infinite linear alternate;
+}
+@keyframes kub-3{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-45deg);
+        background-color: rgb(255, 8, 0);
+        box-shadow: 0 0 0 10px #4de91e;
+    }
+    100%{
+        transform: rotate(0deg);
+        background-color: rgb(253, 147, 9);
+    }
+}
+.kub {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    position: relative;
+    transition: 0.4s;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffee04;
+}
+
+
+
+.kub::before{
+    display: inline-block;
+    font-size: 56px;
+}
+
+
+.kub:nth-child(1){
+    transition: 0.2s;
+    position: relative;
+    border-radius: 10px 0px 0px 10px;
+}
+.kub:nth-child(3){
+    transition: 0.2s;
+    position: relative;
+    border-radius: 0px 10px 10px 0px;
+}
+.kub:nth-child(1)::before{
+    content: "B U";
+    position: absolute;
+    right: 0;
+}
+.kub:nth-child(2)::before{
+    content: "T T";
+    position: absolute;
+    top: 50;
+}
+.kub:nth-child(3)::before{
+    content: "O N";
+    position: absolute;
+    left: 0;
+}
